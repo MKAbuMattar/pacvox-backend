@@ -1,0 +1,13 @@
+export const LOGIN_SUCCESSFULLY = 'Login successfully'
+export const INCORRECT_USERNAME_OR_PASSWORD = 'Incorrect Username or Password'
+export const REGISTER_SUCCESSFULLY = 'Register successfully'
+export const USERNAME_ALREADY_EXIST = 'Username already exist'
+export const EMAIL_ALREADY_EXIST = 'Email already exist'
+export const GET_ALL_USERS_SUCCESSFULLY = 'Get all users successfully'
+export const SET_AVATAR_SUCCESSFULLY = 'Set avatar successfully'
+export const USER_ID_IS_REQUIRED = 'User id is required'
+export const LOGOUT_SUCCESSFULLY = 'Logout successfully'
+export const GET_ALL_MESSAGES_SUCCESSFULLY = 'Get all messages successfully'
+export const MESSAGE_ADDED_SUCCESSFULLY = 'Message added successfully'
+export const FAILED_TO_ADD_MESSAGE_TO_THE_DATABASE =
+  'Failed to add message to the database'

@@ -1,0 +1,37 @@
+{
+  "name": "pacvox-backend",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/bin/www.js",
+  "scripts": {
+    "start": "babel-node src/bin/www.js",
+    "dev": "nodemon --exec babel-node src/bin/www.js",
+    "clean": "rm -rf build",
+    "build": "npm run clean && npx babel src -d build --minified --presets @babel/preset-env"
+  },
+  "keywords": [],
+  "author": "Mohammad Abu Mattar <mohammad.khaled@outlook> (mkabumattar.github.io)",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.18.2",
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "core-js": "^3.22.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "helmet": "^5.1.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.2.1",
+    "regenerator-runtime": "^0.13.9",
+    "socket.io": "^4.4.1",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "babel-plugin-module-resolver": "^4.1.0"
+  }
+}
