@@ -1,6 +1,10 @@
 import bcrypt from 'bcrypt'
 import UserModel from '../models/user.model'
 
+export const findById = async (id) => {
+  return await UserModel.find({ _id: { $ne: id } })
+}
+
 export const findByUser = async (username) => {
   return await UserModel.findOne({ username })
 }
@@ -23,6 +27,23 @@ export const register = async (username, email, password) => {
   })
 
   return newUser
+}
+
+export const updateUserUsername = async (userId, username) => {
+  return await UserModel.findByIdAndUpdate(userId, { username }, { new: true })
+}
+
+export const updateUserEmail = async (userId, email) => {
+  return await UserModel.findByIdAndUpdate(userId, { email }, { new: true })
+}
+
+export const updateUserPassword = async (userId, password) => {
+  const hashedPassword = await bcrypt.hash(password, 10)
+  return await UserModel.findByIdAndUpdate(
+    userId,
+    { password: hashedPassword },
+    { new: true },
+  )
 }
 
 export const getAllUsers = async (id) => {
