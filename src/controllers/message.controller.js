@@ -11,11 +11,14 @@ export const getMessages = async (req, res, next) => {
     logger.info(`Get messages from ${from} to ${to}`)
 
     const projectedMessages = messages.map((msg) => {
+      logger.info({ msg })
       return {
         fromSelf: msg.sender.toString() === from,
         message: msg.message.text,
+        createdAt: msg.createdAt,
       }
     })
+
     logger.info(`Projected messages: ${JSON.stringify(projectedMessages)}`)
 
     res.json(projectedMessages)

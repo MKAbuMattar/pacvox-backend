@@ -10,6 +10,10 @@ const UserSchema = new mongoose.Schema(
       min: ConstantNumber.USERNAME_MIN_LENGTH,
       max: ConstantNumber.USERNAME_MAX_LENGTH,
     },
+    name: {
+      type: String,
+      required: true,
+    },
     email: {
       type: String,
       required: true,
