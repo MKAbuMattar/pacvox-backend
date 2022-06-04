@@ -7,6 +7,7 @@ const router = express.Router()
 
 router.post(ConstantAPI.USER_LOGIN, UserController.login)
 router.post(ConstantAPI.USER_REGISTER, UserController.register)
+router.post(ConstantAPI.USER_UPDATE_NAME, UserController.updateName)
 router.post(ConstantAPI.USER_UPDATE_USERNAME, UserController.updateUserUsername)
 router.post(ConstantAPI.USER_UPDATE_EMAIL, UserController.updateUserEmail)
 router.post(ConstantAPI.USER_UPDATE_PASSWORD, UserController.updateUserPassword)

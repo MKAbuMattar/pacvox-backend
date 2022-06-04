@@ -19,3 +19,7 @@ export const GET_ALL_MESSAGES_SUCCESSFULLY = 'Get all messages successfully'
 export const MESSAGE_ADDED_SUCCESSFULLY = 'Message added successfully'
 export const FAILED_TO_ADD_MESSAGE_TO_THE_DATABASE =
   'Failed to add message to the database'
+export const EMAIL_NOT_VALID = 'Email not valid'
+export const PASSWORD_NOT_MATCH = 'Password not match'
+export const PASSWORD_NOT_VALID =
+  'Password must be at least 8 characters and contain at least one number, one uppercase letter and one lowercase letter, and one special character.'
