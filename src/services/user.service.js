@@ -17,6 +17,10 @@ export const validedPassword = async (password, hashedPassword) => {
   return await bcrypt.compare(password, hashedPassword)
 }
 
+export const validateUsername = async (username) => {
+  return /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{3,32}$/.test(username)
+}
+
 export const register = async (username, name, email, password) => {
   const hashedPassword = await bcrypt.hash(password, 10)
 

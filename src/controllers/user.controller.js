@@ -56,6 +56,14 @@ export const register = async (req, res, next) => {
   try {
     const { username, name, email, password } = req.body
 
+    const usernameValidated = await UserService.validateUsername(username)
+    if (!usernameValidated) {
+      return res.json({
+        msg: ConstantMessage.USERNAME_NOT_VALID,
+        status: false,
+      })
+    }
+
     const usernameCheck = await UserService.findByUser(username)
     if (usernameCheck) {
       return res.json({
@@ -150,6 +158,14 @@ export const updateUserUsername = async (req, res, next) => {
     if (user.username === username) {
       return res.json({
         msg: ConstantMessage.USERNAME_SAME_AS_OLD,
+        status: false,
+      })
+    }
+
+    const usernameValidated = await UserService.validateUsername(username)
+    if (!usernameValidated) {
+      return res.json({
+        msg: ConstantMessage.USERNAME_NOT_VALID,
         status: false,
       })
     }

@@ -13,13 +13,16 @@ export const OLDPASSWORD_INCORRECT = 'Old password incorrect'
 export const USER_UPDATED_SUCCESSFULLY = 'User updated successfully'
 export const GET_ALL_USERS_SUCCESSFULLY = 'Get all users successfully'
 export const SET_AVATAR_SUCCESSFULLY = 'Set avatar successfully'
-export const USER_ID_IS_REQUIRED = 'User id is required'
+export const USER_ID_IS_REQUIRED = 'User id is required, please check again'
 export const LOGOUT_SUCCESSFULLY = 'Logout successfully'
 export const GET_ALL_MESSAGES_SUCCESSFULLY = 'Get all messages successfully'
 export const MESSAGE_ADDED_SUCCESSFULLY = 'Message added successfully'
 export const FAILED_TO_ADD_MESSAGE_TO_THE_DATABASE =
   'Failed to add message to the database'
-export const EMAIL_NOT_VALID = 'Email not valid'
-export const PASSWORD_NOT_MATCH = 'Password not match'
+export const EMAIL_NOT_VALID = 'Email not valid, please check again'
+export const PASSWORD_NOT_MATCH = 'Password not match, please try again'
 export const PASSWORD_NOT_VALID =
   'Password must be at least 8 characters and contain at least one number, one uppercase letter and one lowercase letter, and one special character.'
+
+export const USERNAME_NOT_VALID =
+  'Username not valid, must be at least 3 characters, and contain only letters, numbers, and underscores.'
